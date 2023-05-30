@@ -77,6 +77,7 @@ class ServerExecutor(BaseExecutor):
             bool: 
         """
         # init api
+        # 需要修改config.engine_list，添加stylefastspeech2
         api_list = list(engine.split("_")[0] for engine in config.engine_list)
         if config.protocol == "websocket":
             api_router = setup_ws_router(api_list)
